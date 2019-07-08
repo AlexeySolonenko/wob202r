@@ -4,5 +4,41 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"deploy": {
+			"packages": [
+				{
+					"name": "wobr test ",
+					"description": "testinr wob202r ",
+					"files": [
+						"**/*.php",
+						"**/*.js",
+						"**/*.txt",
+						"**/*.html",
+						"**/*.css",
+					],
+					"deployOnSave": false,
+				}
+			],
+			"targets": [
+				{
+					"type": "sftp",
+					"name": "wob202r test env",
+					"description": "test wob202r folder ",
+					"dir": "/",
+					"host": "tab4lioz.beget.tech",
+					"port": 22,
+					"user": "tab4lioz_wob202r",
+					"password": "T2rlpmL5*kl",
+					"checkBeforeDeploy": true,
+					"mappings": [
+						{
+							"source": "/",
+							"target": "/home/t/tab4lioz/wob202r/wob202r/"
+						}
+					],
+				},
+			]
+		},
+	},
 }
